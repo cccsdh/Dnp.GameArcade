@@ -1,0 +1,17 @@
+[
+  {
+    "file": "crypt-of-tharn.json",
+    "name": "The Crypt of Tharn",
+    "description": "A small hand-built sample pack: three levels, a hollow king and a hidden gate."
+  },
+  {
+    "file": "stronghold-of-kahr-dur.json",
+    "name": "The Stronghold of Kahr-Dur",
+    "description": "After the Eamon classic: a haunted fortress, its caves, Tangledoom Forest and a demon temple. Rescue Lady Mirabelle."
+  },
+  {
+    "file": "pyramid-of-anharos.json",
+    "name": "The Pyramid of Anharos",
+    "description": "After the Eamon classic: recover the stolen Diamond of Purity from the Riff raiders and restore it to Anharos' tomb."
+  }
+]

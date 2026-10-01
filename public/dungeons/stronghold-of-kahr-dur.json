@@ -1,0 +1,1194 @@
+{
+  "format": "underrealm-dungeon",
+  "version": 1,
+  "id": "stronghold-of-kahr-dur",
+  "name": "The Stronghold of Kahr-Dur",
+  "author": "Modeled after Eamon Deluxe EDX-24 by Derek C. Jeter",
+  "description": "A mountain fortress, the caves beneath it, a haunted forest and a demon temple. Rescue Lady Mirabelle from the Necromancer.",
+  "intro": [
+    "A raven brings word from your brother Jollifrud in the city of Fahrnor: something in the",
+    "abandoned fortress of Kahr-Dur has been stealing people in the night - his daughter,",
+    "Lady Mirabelle, among them. Find her, deal with the evil, and bring her home."
+  ],
+  "victory": [
+    "You lead Lady Mirabelle out through the gates of Kahr-Dur, into the morning light.",
+    "Jollifrud weeps as he embraces his daughter. Fahrnor will sleep soundly tonight."
+  ],
+  "goal": {
+    "requires": "crystal",
+    "item": "Lady Mirabelle",
+    "sprite": "captive",
+    "hum": false,
+    "taken": "You strike the chains from Lady Mirabelle. \"Take me home!\" she cries. Lead her back out through the gates of Kahr-Dur.",
+    "barred": "Jollifrud bars the gate. \"Not without my daughter!\""
+  },
+  "start": {
+    "gold": 120,
+    "food": 5,
+    "water": 5,
+    "torches": 4,
+    "potions": 2,
+    "weapon": "shortsword",
+    "armor": "leather"
+  },
+  "music": {
+    "battle": {
+      "chiptune": {
+        "bpm": 150,
+        "leadWave": "pulse25",
+        "lead": "A4 A4 . C5 . A4 E5 . D5 C5 B4 . G#4 . B4 . A4 A4 . C5 . A4 F5 . E5 D5 C5 . B4 . G#4 .",
+        "bass": "A1 A2 A1 A2 A1 A2 A1 A2 E1 E2 E1 E2 E1 E2 E1 E2 F1 F2 F1 F2 F1 F2 F1 F2 E1 E2 E1 E2 E1 E2 E1 E2",
+        "drums": "k . h k s . h . k . h k s . h . k . h k s . h . k k h k s . s s"
+      }
+    },
+    "abyss": {
+      "song": "realmAbyss"
+    }
+  },
+  "textures": {
+    "keepWall": {
+      "preset": "stone",
+      "color": "#6c6c74",
+      "mortar": "#26262a"
+    },
+    "tapestryWall": {
+      "preset": "tapestry",
+      "color": "#6c6c74",
+      "mortar": "#26262a",
+      "accent": "#5c1c2c"
+    },
+    "conjureWall": {
+      "preset": "runes",
+      "color": "#24202a",
+      "mortar": "#0c0a0e",
+      "accent": "#f83c28"
+    },
+    "conjureFloor": {
+      "preset": "runes",
+      "color": "#2c2830",
+      "mortar": "#141216",
+      "accent": "#c83020"
+    },
+    "rug": {
+      "preset": "carpet",
+      "color": "#5c1820",
+      "accent": "#a88838"
+    },
+    "caveWall": {
+      "preset": "cave",
+      "color": "#6c6258",
+      "mortar": "#1c1814"
+    },
+    "caveFloor": {
+      "preset": "rubble",
+      "color": "#4c443c"
+    },
+    "forestWall": {
+      "preset": "trees",
+      "color": "#2c5424",
+      "accent": "#3c2c1c"
+    },
+    "grass": {
+      "preset": "grass",
+      "color": "#3c6c2c"
+    },
+    "grassCeil": {
+      "preset": "sky",
+      "color": "#6c8cb8"
+    },
+    "dirtPath": {
+      "preset": "rubble",
+      "color": "#6c5438"
+    },
+    "dirtPathCeil": {
+      "preset": "sky",
+      "color": "#6c8cb8"
+    },
+    "ledge": {
+      "preset": "rubble",
+      "color": "#7c7468"
+    },
+    "ledgeCeil": {
+      "preset": "sky",
+      "color": "#7c9cc8"
+    },
+    "templeStone": {
+      "preset": "stone",
+      "color": "#3c3444",
+      "mortar": "#141018"
+    },
+    "templeRunes": {
+      "preset": "runes",
+      "color": "#2c2434",
+      "mortar": "#0c0a10",
+      "accent": "#b048f8"
+    },
+    "sanctuaryFloor": {
+      "preset": "carpet",
+      "color": "#241c34",
+      "accent": "#7c3cb8"
+    }
+  },
+  "sprites": {
+    "statue": {
+      "model": "knight",
+      "tint": "#a8a8b0"
+    },
+    "darkCaptain": {
+      "model": "darkGuard",
+      "tint": "#ffb8b0"
+    },
+    "ironGolem": {
+      "model": "golem",
+      "tint": "#a8b8e0"
+    },
+    "ochreJelly": {
+      "model": "slime",
+      "tint": "#f0b848"
+    },
+    "goblinChief": {
+      "model": "goblin",
+      "tint": "#ffd8a0"
+    },
+    "goblinSoldier": {
+      "model": "goblin",
+      "tint": "#c8c8b0"
+    },
+    "sharruk": {
+      "model": "lich",
+      "tint": "#e0d0ff"
+    },
+    "dryFountain": {
+      "model": "fountain",
+      "tint": "#8c8478"
+    }
+  },
+  "tiles": {
+    "w": {
+      "type": "wall",
+      "texture": "keepWall"
+    },
+    "y": {
+      "type": "wall",
+      "texture": "tapestryWall"
+    },
+    "z": {
+      "type": "secret",
+      "texture": "keepWall"
+    },
+    "q": {
+      "type": "wall",
+      "texture": "conjureWall"
+    },
+    ";": {
+      "type": "floor",
+      "floor": "conjureFloor"
+    },
+    "r": {
+      "type": "floor",
+      "floor": "rug"
+    },
+    "s": {
+      "type": "prop",
+      "sprite": "statue",
+      "walkable": false
+    },
+    "g": {
+      "type": "prop",
+      "sprite": "gargoyle",
+      "walkable": false
+    },
+    "k": {
+      "type": "wall",
+      "texture": "caveWall"
+    },
+    ",": {
+      "type": "floor",
+      "floor": "caveFloor"
+    },
+    "A": {
+      "type": "throne",
+      "sprite": "altar"
+    },
+    "F": {
+      "type": "wall",
+      "texture": "forestWall"
+    },
+    "\"": {
+      "type": "floor",
+      "floor": "grass"
+    },
+    ":": {
+      "type": "floor",
+      "floor": "dirtPath"
+    },
+    "_": {
+      "type": "floor",
+      "floor": "ledge"
+    },
+    "e": {
+      "type": "prop",
+      "sprite": "tree",
+      "walkable": false
+    },
+    "v": {
+      "type": "wall",
+      "texture": "templeStone"
+    },
+    "u": {
+      "type": "wall",
+      "texture": "templeRunes"
+    },
+    "m": {
+      "type": "floor",
+      "floor": "sanctuaryFloor"
+    },
+    "n": {
+      "type": "prop",
+      "sprite": "dryFountain",
+      "walkable": false
+    },
+    "a": {
+      "type": "prop",
+      "sprite": "altar",
+      "walkable": false
+    }
+  },
+  "monsters": [
+    {
+      "id": "darkGuard",
+      "name": "Dark Guard",
+      "sprite": "darkGuard",
+      "levels": [],
+      "hp": [18, 24],
+      "dmg": [3, 8],
+      "hit": 8,
+      "def": 4,
+      "xp": 45,
+      "gold": [10, 30],
+      "gullible": 0.15,
+      "bribe": 0,
+      "intro": "A dark guard in a spiked black helm raises its battle axe. Two red eyes burn behind the visor."
+    },
+    {
+      "id": "guardCaptain",
+      "name": "Dark Guard Captain",
+      "sprite": "darkCaptain",
+      "levels": [],
+      "hp": [30, 34],
+      "dmg": [4, 9],
+      "hit": 10,
+      "def": 5,
+      "xp": 80,
+      "gold": [30, 60],
+      "gullible": 0.1,
+      "bribe": 0,
+      "intro": "The captain of the dark guards bars the way to the throne room!"
+    },
+    {
+      "id": "stoneGolem",
+      "name": "Stone Golem",
+      "sprite": "golem",
+      "levels": [],
+      "hp": [34, 40],
+      "dmg": [4, 10],
+      "hit": 6,
+      "def": 6,
+      "xp": 90,
+      "gold": [0, 0],
+      "gullible": 0.6,
+      "bribe": 0,
+      "intro": "A massive stone golem lurches forward, fists that could smash through walls!"
+    },
+    {
+      "id": "ironGolem",
+      "name": "Iron Golem",
+      "sprite": "ironGolem",
+      "levels": [],
+      "hp": [30, 36],
+      "dmg": [5, 11],
+      "hit": 9,
+      "def": 7,
+      "xp": 100,
+      "gold": [0, 0],
+      "gullible": 0.55,
+      "bribe": 0,
+      "intro": "A gigantic iron golem turns its glowing yellow eyes on you, blade-fingers flexing."
+    },
+    {
+      "id": "ochreJelly",
+      "name": "Ochre Jelly",
+      "sprite": "ochreJelly",
+      "levels": [],
+      "hp": [26, 30],
+      "dmg": [2, 6],
+      "hit": 0,
+      "def": 1,
+      "xp": 50,
+      "gold": [5, 25],
+      "gullible": 0.2,
+      "bribe": 0,
+      "special": "poison",
+      "intro": "A massive pulsing blob of ooze heaves toward you. Bones float inside it."
+    },
+    {
+      "id": "goblinSoldier",
+      "name": "Goblin Soldier",
+      "sprite": "goblinSoldier",
+      "levels": [
+        2,
+        3,
+        4
+      ],
+      "hp": [9, 13],
+      "dmg": [2, 6],
+      "hit": 6,
+      "def": 2,
+      "xp": 18,
+      "gold": [4, 16],
+      "gullible": 0.4,
+      "bribe": 20,
+      "intro": "A goblin soldier charges, ready for battle!"
+    },
+    {
+      "id": "goblinChief",
+      "name": "Goblin Chieftain",
+      "sprite": "goblinChief",
+      "levels": [],
+      "hp": [24, 28],
+      "dmg": [3, 8],
+      "hit": 8,
+      "def": 3,
+      "xp": 70,
+      "gold": [40, 80],
+      "gullible": 0.3,
+      "bribe": 60,
+      "intro": "A fierce goblin chieftain snarls, a ruby amulet swinging at his throat."
+    },
+    {
+      "id": "ghoul",
+      "name": "Ghoul",
+      "sprite": "ghoul",
+      "levels": [
+        3,
+        4,
+        5
+      ],
+      "hp": [16, 20],
+      "dmg": [3, 7],
+      "hit": 8,
+      "def": 3,
+      "xp": 40,
+      "gold": [0, 15],
+      "gullible": 0.3,
+      "bribe": 0,
+      "special": "poison",
+      "intro": "A wicked, snarling ghoul springs at you, black claws raking!"
+    },
+    {
+      "id": "necromancer",
+      "name": "The Necromancer",
+      "sprite": "necromancer",
+      "levels": [],
+      "hp": [80, 80],
+      "dmg": [6, 13],
+      "hit": 14,
+      "def": 6,
+      "xp": 600,
+      "gold": [300, 300],
+      "gullible": 0.05,
+      "bribe": 0,
+      "special": "boss",
+      "bolt": [6, 12],
+      "boltText": "hurls a bolt of necrotic fire",
+      "intro": "The Necromancer turns from the altar, milky eyes blazing. He grins with needle teeth: \"Another for my collection!\""
+    },
+    {
+      "id": "serpent",
+      "name": "Demonic Serpent",
+      "sprite": "serpent",
+      "levels": [
+        4,
+        5,
+        6
+      ],
+      "hp": [12, 16],
+      "dmg": [3, 7],
+      "hit": 10,
+      "def": 2,
+      "xp": 32,
+      "gold": [0, 0],
+      "gullible": 0.4,
+      "bribe": 0,
+      "special": "poison",
+      "intro": "A demonic serpent rears up, dagger-like fangs bared!"
+    },
+    {
+      "id": "hellhound",
+      "name": "Hell Hound",
+      "sprite": "hellhound",
+      "levels": [
+        5,
+        6,
+        7
+      ],
+      "hp": [18, 24],
+      "dmg": [4, 9],
+      "hit": 10,
+      "def": 3,
+      "xp": 50,
+      "gold": [0, 0],
+      "gullible": 0.35,
+      "bribe": 0,
+      "intro": "A snarling hell hound bounds out of the dark, eyes glowing red!"
+    },
+    {
+      "id": "fireDemon",
+      "name": "Fire Demon",
+      "sprite": "demon",
+      "levels": [6, 7],
+      "hp": [26, 32],
+      "dmg": [5, 11],
+      "hit": 12,
+      "def": 5,
+      "xp": 80,
+      "gold": [10, 40],
+      "gullible": 0.3,
+      "bribe": 0,
+      "intro": "A fire demon unfurls its wings in a burst of flame!"
+    },
+    {
+      "id": "ent",
+      "name": "Evil Tree Ent",
+      "sprite": "ent",
+      "levels": [],
+      "hp": [36, 44],
+      "dmg": [5, 12],
+      "hit": 4,
+      "def": 6,
+      "xp": 110,
+      "gold": [0, 0],
+      "gullible": 0.4,
+      "bribe": 0,
+      "special": "regen",
+      "intro": "The branches of a huge oak sweep aside to reveal a terrible wooden face - and teeth!"
+    },
+    {
+      "id": "skeletonGuard",
+      "name": "Skeleton Warriors",
+      "sprite": "skeleton",
+      "levels": [],
+      "hp": [30, 34],
+      "dmg": [4, 9],
+      "hit": 10,
+      "def": 3,
+      "xp": 70,
+      "gold": [10, 30],
+      "gullible": 0.25,
+      "bribe": 0,
+      "intro": "Three skeletons clack and chatter in alarm, then rush you as one!"
+    },
+    {
+      "id": "zombieHorde",
+      "name": "Zombie Horde",
+      "sprite": "zombie",
+      "levels": [],
+      "hp": [38, 44],
+      "dmg": [4, 9],
+      "hit": 4,
+      "def": 2,
+      "xp": 75,
+      "gold": [5, 30],
+      "gullible": 0.7,
+      "bribe": 0,
+      "intro": "A horde of rotting zombies lurches at you, reeking of the grave!"
+    },
+    {
+      "id": "hydra",
+      "name": "Undead Hydra",
+      "sprite": "hydra",
+      "levels": [],
+      "hp": [52, 58],
+      "dmg": [6, 13],
+      "hit": 12,
+      "def": 4,
+      "xp": 200,
+      "gold": [40, 90],
+      "gullible": 0.2,
+      "bribe": 0,
+      "special": "regen",
+      "intro": "A massive five-headed undead hydra rises, black bones showing through its rotting hide!"
+    },
+    {
+      "id": "sharruk",
+      "name": "Sharruk the Lich",
+      "sprite": "sharruk",
+      "levels": [],
+      "hp": [70, 70],
+      "dmg": [6, 14],
+      "hit": 16,
+      "def": 7,
+      "xp": 420,
+      "gold": [150, 150],
+      "gullible": 0.1,
+      "bribe": 250,
+      "special": "drain",
+      "intro": "Sharruk the Lich fixes you with piercing yellow eyes. \"Free me from this temple,\" he hisses, \"or join my servants!\""
+    }
+  ],
+  "levels": [
+    {
+      "name": "The Stronghold of Kahr-Dur",
+      "depth": 2,
+      "style": {
+        "palette": "stone"
+      },
+      "music": "depths",
+      "encounters": {
+        "rate": 0.035,
+        "monsters": [
+          "rat",
+          "bat",
+          "goblin",
+          "skeleton"
+        ]
+      },
+      "map": [
+        "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwyyyyyyyyyyyyyyywwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwyrrsrrrrrrrsrrywwwwwww........www",
+        "wwwwwwwwwwwwwwwyrrrrrrrrrrrrryrrrrrrw....t...www",
+        "wwwwwwwwwwwwwwwyrrrrrrrrrrrrryrrrrrrw........www",
+        "wwwwwwwwwwwwwwwyrKrrrrrrrrrrrDrrrrrrz........tww",
+        "wwwwwwwwwwwwwwwyrrrrrrrrrrrrryrrrrrrw........www",
+        "wwwwwwwwwwwwwwwyrrrrrrrrrrrrryrrrrrrw........www",
+        "wwwwwwwwwwwwwwwyrrsrrrrrrrsrrywwDwwwwwwwwqq.qqqq",
+        "wwwwwwwwwwwc..cyyyyyyy.yyyyyyy...w......cq;;;;;q",
+        "wwwwwwwwwww....wyrrrrrrrrrrryw...w.......q;;;;;q",
+        "wwwwwwwwwww....wyrrrrrrrrrrrywwwww.......q;;;;;q",
+        "www......cww....DrrrrrrrrrrrD............q;;;;;q",
+        "www.......wwwwwwyrrrrrrrrrrrywwwww.......q;;;;;q",
+        "www.......wwwwwwyrrrrrrrrrrrywwwww.......q;;;;;q",
+        "www.......wwwwwwyyyyyy.yyyyyywwwwwwwwDwwwq;;;;;q",
+        "wwwwwwDwwwwwwwwwwwwww...wwwwwwwwww.......q;;;;;q",
+        "wwwwww.wwwwwwwwwwwwws...swwwwwwwww.......qqq>qqq",
+        "wwwwww.wwwwwwwwwwwwww...wwwwwwwwww.......wwwwwww",
+        "wwwwww.w....cwwwwwwws...swwwwwwwww.......wwwwwww",
+        "wwwwww.D.....wwwwwwww...wwwwwwwwww.......wwwwwww",
+        "wwwwww.w.....wwwwtwwww.wwwwtwwwwwwwwwDwwwwwwwwww",
+        "wwwwww.wwwwwwwwww...........w....w.......wwwwwww",
+        "wwwwww.ww.s..s..w...........w....w.......wwwwwww",
+        "wwwwww..........D...........D....D.......wwwwwww",
+        "wwwwww.ww.s..s..w...........w....w.......wwwwwww",
+        "wwwwww.wwwwwwwwww...........w....w......cwwwwwww",
+        "wwwwww.wwc.c.cwwwwwwww.wwwwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwww.wwwwzwwwwwwwww...wwwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwww.w.......wwwwwt...wwwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwww.D.......wwwwww...wwwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwww.w.......wwwwww...twwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwww.w.......wwwwww...wwwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwwwDwwwwwwwwwyyyyyy.yyyyyywwwwwwwwwwwwwwwwwww",
+        "wwww.....wwwwwwwy...........ywwwwwwwwwwwwwwwwwww",
+        "wwww.....wwc....y...........ywwwwwwwwwwwwwwwwwww",
+        "wwwwc....ww.....D...........ywwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwc....y...........ywwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwy...........ywwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwyyyyyy.yyyyyywwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwwwwww...wwwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwwwwws...swwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwwwwww...wwwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwwwwws...swwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwwwwww...wwwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwwwwwww.wwwwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwww.........wwwwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwwt....s....twwwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwww.........wwwwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwwwwwww.wwwwwwwwwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwxxxxxxxgxgxxxxxxxwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwGxxxxxxxxxxxxxxxxxtwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwxxxxxxxx@xxxxxxxxwwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwtxxxxxxxxxxxxxxxxxtwwwwwwwwwwwwwwww",
+        "wwwwwwwwwwwwwwwwTwwPwwEwwSwwHwwwwwwwwwwwwwwwwwww"
+      ],
+      "chests": [
+        {
+          "at": [11, 35],
+          "gold": 45,
+          "item": "torches"
+        },
+        {
+          "at": [11, 37],
+          "gold": 10,
+          "item": "potion"
+        },
+        {
+          "at": [9, 27],
+          "gold": 90
+        },
+        {
+          "at": [11, 27],
+          "gold": 140,
+          "item": "potion"
+        },
+        {
+          "at": [13, 27],
+          "gold": 90,
+          "item": "torches"
+        },
+        {
+          "at": [4, 36],
+          "gold": 6
+        },
+        {
+          "at": [12, 19],
+          "gold": 4,
+          "item": "torches"
+        },
+        {
+          "at": [9, 12],
+          "gold": 20,
+          "item": "potion"
+        },
+        {
+          "at": [11, 9],
+          "gold": 0,
+          "item": "armor",
+          "gear": "chain"
+        },
+        {
+          "at": [14, 9],
+          "gold": 35,
+          "item": "weapon",
+          "gear": "mace"
+        },
+        {
+          "at": [40, 26],
+          "gold": 5,
+          "item": "food"
+        },
+        {
+          "at": [40, 9],
+          "gold": 25,
+          "item": "food"
+        }
+      ],
+      "guardians": [
+        {
+          "at": [13, 36],
+          "monster": "darkGuard"
+        },
+        {
+          "at": [22, 13],
+          "monster": "guardCaptain"
+        },
+        {
+          "at": [37, 11],
+          "monster": "darkGuard"
+        },
+        {
+          "at": [37, 24],
+          "monster": "darkGuard"
+        },
+        {
+          "at": [39, 4],
+          "monster": "stoneGolem"
+        },
+        {
+          "at": [43, 7],
+          "monster": "ironGolem"
+        }
+      ],
+      "messages": [
+        {
+          "at": [22, 52],
+          "text": "The gates of Kahr-Dur loom in the mountainside. Stone gargoyles glare down at you."
+        },
+        {
+          "at": [22, 49],
+          "text": "Your brother Jollifrud grips your arm: \"Find Mirabelle. I will hold the gate.\""
+        },
+        {
+          "at": [22, 46],
+          "text": "A tall statue of some long-dead warrior stands in the middle of the entryway."
+        },
+        {
+          "at": [22, 38],
+          "text": "Tattered tapestries hang in the Welcome Hall. The fine furniture lies smashed."
+        },
+        {
+          "at": [15, 36],
+          "text": "An iron storage locker sits in the corner of the Doorwardens' chamber."
+        },
+        {
+          "at": [15, 24],
+          "text": "Broken statues and shattered pottery litter the ruined gallery."
+        },
+        {
+          "at": [6, 22],
+          "text": "The walls of this narrow hall are scorched, as if a terrible battle was fought here."
+        },
+        {
+          "at": [11, 29],
+          "text": "One bookshelf along the north wall still stands, fixed to the stone. A draught stirs the pages..."
+        },
+        {
+          "at": [6, 14],
+          "text": "Faded maps of the mountain are pinned to the walls of this old office."
+        },
+        {
+          "at": [15, 12],
+          "text": "The heavy iron doors grind open onto an old armory. Most of it is rust."
+        },
+        {
+          "at": [22, 11],
+          "text": "Dark guards in spiked black helms stand watch over the antechamber."
+        },
+        {
+          "at": [18, 5],
+          "text": "A huge throne sits on its dais. Every gem has been pried from it."
+        },
+        {
+          "at": [35, 5],
+          "text": "A battered armoire stands against the east wall. Cold air seeps from behind it."
+        },
+        {
+          "at": [38, 5],
+          "text": "Shattered vials and rune-covered devices: a wizard's laboratory. Something huge stirs."
+        },
+        {
+          "at": [44, 12],
+          "text": "Summoning runes are cut into the floor. Empty iron cages. Narrow stairs lead down into the rock."
+        },
+        {
+          "at": [36, 17],
+          "text": "Soldiers' mess. Someone has been eating here - recently."
+        }
+      ]
+    },
+    {
+      "name": "The Caves Beneath Kahr-Dur",
+      "depth": 3,
+      "style": {
+        "palette": "cavern"
+      },
+      "encounters": {
+        "rate": 0.05,
+        "monsters": [
+          "bat",
+          "rat",
+          "goblinSoldier",
+          "goblin",
+          "spider",
+          "ghoul"
+        ]
+      },
+      "map": [
+        "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkktttttttttttk",
+        "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkktc...A...ctk",
+        "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkt.........tk",
+        "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkt.........tk",
+        "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkt.........tk",
+        "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkttttt.tttttk",
+        "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk.kkkkkk",
+        "kk,,,,,kkkkkkkkkkkkkkkkkk,,,,,kkkkkkk.kkkkkk",
+        "k,,,,,,,kkkkkkk>kkkkkkkk,,,,,,,kkkkk,,,kkkkk",
+        "k,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,L,,,,,,,kkkkk",
+        "k,,,,,,,kkkkkkkkkkkkkkkk,,,,,,,kkkkk,,,kkkkk",
+        "kk,,,,,kkkkkkkkkkkkkkkkkk,,,,,kkkkkkkkkkkkkk",
+        "kkk,kkkkkkkkkkkkkkkkkkkkkkk,kkkkkkkkkkkkkkkk",
+        "kkk,kkkkkkkkkkkkkkkkkkkkkkk,kkkkkkkkkkkkkkkk",
+        "kk,,,kkkkkkkkkkkkkkkkkkkkkk,kkkkkkkkkkkkkkkk",
+        "k,,,,,kkkkkkkkkkkkkkkkkkkk,,,kkkkkkkkkkkkkkk",
+        "kc,,,,kkkkkkkkkkkkkkkkkkkk,,,kkkkkkkkkkkkkkk",
+        "k,,,,,kkkkkkkkkkkkkkkkkkkk,,,kkkkkkkkkkkkkkk",
+        "kk,,,kkkkkkkkkkkkkkkkkkkkkk,kkkkkkkkkkkkkkkk",
+        "kkk,kkkkkkkkkkkkkkkkkkkkkkk,kkkkkkkkkkkkkkkk",
+        "kk,,,k,,,,,kkkkkkkkkkkkkkkk,kkkkkkkkkkkkkkkk",
+        "kk,,,,,,,,,,kkkkkkkkkkkkk,,,,,kkkkkkk,,,kkkk",
+        "kk,,,,,,,,,,kkkkk,,,kkkk,,,,,,,kkkkk,,,,,kkk",
+        "kkkkk,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,ckkk",
+        "kkkkkk,,,,,kkkkkk,,,kkkk,,,,,,,kkkkk,,,,,kkk",
+        "kkkkkkkk,kkkkkkkkkkkkkkkk,,,,,kkkkkkk,,,kkkk",
+        "kkkkkkkk,kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+        "kkkkkkkk,kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+        "kkkkkkkk,kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+        "kkkkkkk,,,kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+        "kkkkkk,,,,,kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+        "kkkkkkk,,,kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+        "kkkkkkkk,kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+        "kkkkkkkk<kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+      ],
+      "chests": [
+        {
+          "at": [1, 16],
+          "gold": 120,
+          "item": "potion"
+        },
+        {
+          "at": [40, 23],
+          "gold": 80,
+          "item": "weapon",
+          "gear": "broadsword"
+        },
+        {
+          "at": [33, 1],
+          "gold": 150,
+          "item": "potion"
+        },
+        {
+          "at": [41, 1],
+          "gold": 60,
+          "item": "weapon",
+          "gear": "runeblade"
+        }
+      ],
+      "guardians": [
+        {
+          "at": [8, 22],
+          "monster": "ochreJelly"
+        },
+        {
+          "at": [3, 16],
+          "monster": "ghoul"
+        },
+        {
+          "at": [38, 23],
+          "monster": "goblinChief"
+        },
+        {
+          "at": [37, 1],
+          "monster": "necromancer"
+        }
+      ],
+      "messages": [
+        {
+          "at": [8, 30],
+          "text": "Rough-hewn walls, thick with moss and lichen. A broken tunnel leads north into natural caves."
+        },
+        {
+          "at": [8, 24],
+          "text": "A particularly foul odour hangs in the air here..."
+        },
+        {
+          "at": [3, 18],
+          "text": "Gnawed bones. Something here eats men."
+        },
+        {
+          "at": [15, 9],
+          "text": "A huge stair, roughly hewn and scarred from battle, leads down into the darkness."
+        },
+        {
+          "at": [29, 9],
+          "text": "To the east, a heavy portcullis thrums with magic - its lock is carved with the runes of some deeper temple. Beyond it, a woman is weeping."
+        },
+        {
+          "at": [37, 6],
+          "text": "A shimmering light to the north. Evil runes, written in blood, cover the walls."
+        },
+        {
+          "at": [36, 23],
+          "text": "Goblin voices, and the clatter of arms. A war-camp!"
+        }
+      ]
+    },
+    {
+      "name": "Tangledoom Forest",
+      "depth": 4,
+      "style": {
+        "palette": "forest"
+      },
+      "daylight": true,
+      "music": {
+        "chiptune": {
+          "bpm": 84,
+          "leadWave": "triangle",
+          "volume": 0.6,
+          "lead": "E4 - G4 - B4 - A4 G4 F#4 - - - E4 - D4 - E4 - - - B3 - D4 - E4 - G4 F#4 E4 - - - E4 - G4 - B4 - C5 B4 A4 - - - G4 - F#4 - G4 - - - A4 - F#4 - D#4 - F#4 - E4 - - -",
+          "harmony": "E3 . B3 . E3 . B3 . D3 . A3 . D3 . A3 . C3 . G3 . C3 . G3 . B2 . F#3 . B2 . F#3 . E3 . B3 . E3 . B3 . A2 . E3 . A2 . E3 . C3 . G3 . B2 . F#3 . E3 . B3 . E3 . B3 .",
+          "bass": "E2 - - - - - - - D2 - - - - - - - C2 - - - - - - - B1 - - - - - - - E2 - - - - - - - A1 - - - - - - - C2 - - - B1 - - - E2 - - - - - - -",
+          "drums": "k . . . h . . . k . . . h . . . k . . . h . . . k . . . h . h . k . . . h . . . k . . . h . . . k . . . h . . . k . . . s . . ."
+        }
+      },
+      "encounters": {
+        "rate": 0.05,
+        "monsters": [
+          "spider",
+          "serpent",
+          "goblinSoldier",
+          "orc",
+          "bat"
+        ]
+      },
+      "map": [
+        "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFFFFFFF\"\"f\"\"FFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFFFFFFe\"\"\"\"\"\"FFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFFFFFFF\"\"\"\"\"FFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFF\"\"\"FFFF\"\"\"FFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFc\"\"\"\"FFFF:FFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFF\"\"\"\"\"FFFF:FFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFF\"\"\"\"\"FFF\"\"\"FFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFF\"\"\"FFF\"\"\"\"\"FFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFF\"\"\"FFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFFF:FFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFFF:FFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFFF:FFFF\"\"\"FF\"\"\"F",
+        "FFFFFFFFFFFFFFFFFFF:::::::::::\"\"\"\"\":\"\">F",
+        "FFFFFFFFFFFFFFFFFFF:FFFFFF:FFFF\"\"\"FF\"\"\"F",
+        "FFFFFFFFFFFFFFFFFFF:FFFFFF:FFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFFF:FFFFF\"\"\"FFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFFF:FFFF\"\"\"\"cFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFF\"\"\"FFFF\"\"\"FFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFF\"\"\"FFFFF:FFFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFF\"\"\"FFFFF:FFFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFFF:FFFFFF:FFFFFF",
+        "FFFFFFFFFFFFFFFFFe\"\"\"FFFFF:FFFFFF:FFFFFF",
+        "FFFFFFFFFFFFFFFFF\"\"\"\"\"FFFF:FFFFF\"\"\"FFFFF",
+        "FFFFFFFFFFFFFFFFF\"\"\"\"\"::::::::::\"\"\"FFFFF",
+        "FFFFFFFFFFFFFFFFF\"\"\"\"\"FFFFFFFFFF\"\"\"FFFFF",
+        "FFFFFFFFFFFFFFFFFF\"\"\"eFFFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF:FFFFFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFFFFF_FFFFFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFF_______FFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFFFF_______FFFFFFFFFFFFFFFFF",
+        "FFFFFFFFFFFFFkkk_______kkkkkkkkkkkkkFFFF",
+        "FFFFFFFFFFFFFkkkkkk,kkkkkkkkkkkkkkkkFFFF",
+        "FFFFFFFFFFFFFkkkk,,,,,kkkkkkkkkkkkkkFFFF",
+        "FFFFFFFFFFFFFkkkk,,,,,kkkkkk,,,,,kkkFFFF",
+        "FFFFFFFFFFFFFkkkk,,,,,,,,,,,,,,,,kkkFFFF",
+        "FFFFFFFFFFFFFkkkk,,,,,kkkkkk,,,,,kkkFFFF",
+        "FFFFFFFFFFFFFkkkkkkkkkkkkkkkkk<kkkkkFFFF",
+        "FFFFFFFFFFFFFkkkkkkkkkkkkkkkkkkkkkkkFFFF"
+      ],
+      "chests": [
+        {
+          "at": [35, 19],
+          "gold": 65,
+          "item": "potion"
+        },
+        {
+          "at": [17, 7],
+          "gold": 30,
+          "item": "potion"
+        }
+      ],
+      "guardians": [
+        {
+          "at": [33, 26],
+          "monster": "ent"
+        },
+        {
+          "at": [33, 19],
+          "monster": "darkGuard"
+        },
+        {
+          "at": [19, 8],
+          "monster": "ent"
+        },
+        {
+          "at": [26, 2],
+          "monster": "ent"
+        }
+      ],
+      "messages": [
+        {
+          "at": [30, 42],
+          "text": "Bones and debris of some long-fought battle litter the hewn chamber."
+        },
+        {
+          "at": [19, 41],
+          "text": "Exotic designs by a master stonemason. Bright sunlight shines up the great stair."
+        },
+        {
+          "at": [19, 37],
+          "text": "A high ledge over an enclosed valley, ringed by snowcapped peaks. A dark forest fills it."
+        },
+        {
+          "at": [19, 31],
+          "text": "An old wooden sign, decrepit with age, barely reads \"Tangledoom Forest\"."
+        },
+        {
+          "at": [19, 26],
+          "text": "The forest is eerily quiet. No birds sing. You dare not step off the path."
+        },
+        {
+          "at": [32, 15],
+          "text": "A narrow stone bridge, green with moss, arches over a brook."
+        },
+        {
+          "at": [37, 15],
+          "text": "A great pit yawns in the clearing. You cannot see the bottom."
+        },
+        {
+          "at": [19, 10],
+          "text": "A curious yellow plant with heavy thorns grows in patches here."
+        },
+        {
+          "at": [26, 4],
+          "text": "A beautiful marble fountain ahead. Its water is cloudy, and smells foul."
+        },
+        {
+          "at": [33, 21],
+          "text": "Heavy footfalls in the clearing ahead - armoured, and not an ent."
+        }
+      ]
+    },
+    {
+      "name": "The Demonic Temple",
+      "depth": 6,
+      "style": {
+        "palette": "basalt"
+      },
+      "music": "abyss",
+      "encounters": {
+        "rate": 0.05,
+        "monsters": [
+          "skeleton",
+          "zombie",
+          "hellhound",
+          "serpent",
+          "fireDemon",
+          "wraith"
+        ]
+      },
+      "map": [
+        "vvvvvvvvvvvvvvvvvvvvvvvv<vvvvvvvvvvvvvvvvvvvvvvv",
+        "vvvvvvvvvvvvvvvvvvvvvv,,,,,vvvvvvvvvvvvvvvvvvvvv",
+        "vvvvvvvvvvvvvvvvvvvvvv,,,,,vvvvvvvvvvvvvvvvvvvvv",
+        "vvvvvvvvvvvvvvvvvvvvvv,,,,,vvvvvvvvvvvvvvvvvvvvv",
+        "vvvvvvvvvvvvvvvvvvvvvvvv,vvvvvvvvvvvvvvvvvvvvvvv",
+        "vvvvvvvvvvvvvvvvvvvvvvvv,vvvvvvvvvvvvvvvvvvvvvvv",
+        "vvvvvvvvvvvvvvvvvvvvvvvv,vvvvvvvvvvvvvvvvvvvvvvv",
+        "vvvvvvvvvvvvvvvvvvvvvvvv,vvvvvvvvvvvvvvvvvvvvvvv",
+        "vvvvvvvvvvvvvvvvvvvvv,,,,,g,vvvvvvvvvvvvvvvvvvvv",
+        "vvvvvvvvvvvvvvvvvvvvv,g,,,,,vvvvvvvvvvvvvvvvvvvv",
+        "vvvvvvvvvvvvvvvvvvvvv,,,,,,,vvvvvvvvvvvvvvvvvvvv",
+        "uuuuuuuvuuuuuuuuvvvvvvvv.vvvvvvvvuuuuuuuuvvvvvvv",
+        "u.....uvu......uvvvvuuuu.uuuuvvvvu.....cuvvvvvvv",
+        "u.....uvu......uvvvvt.......tvvvvu......uvvvvvvv",
+        "u.......................................uvvvvvvv",
+        "u.....uvu......uvvvvu.......uvvvvu......uvvvvvvv",
+        "u.....uvu......uvvvvuuuuuuuuuvvvvu.....cuvvvvvvv",
+        "uuu.uuuvuuuu.uuuvvvvvvvvvvvvvvvvvuuuuuuuuvvvvvvv",
+        "vvv.vvvvvvvv.vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "vvv.vvvvvvvv.vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "vvv.vvvvvvvv.vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "uuu.uuuuuuuu.uuuuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "u.......u.......uvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "u.......u.......uvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "u...n...........uvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "u.......u.......uvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "u.......u......cuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "u.......uuuuuuuuuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "uuuuDuuuuuuuuuuuuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "ummmmmmmmmmmmmmmuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "ummummummmummummuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "ummmmmmmmmmmmmmmuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "ummummummmummummuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "ummmmmmmmmmmmmmmuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "ummmmmucacummmmmuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+        "uuuuuuuuuuuuuuuuuvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv"
+      ],
+      "chests": [
+        {
+          "at": [39, 12],
+          "gold": 90,
+          "item": "potion"
+        },
+        {
+          "at": [39, 16],
+          "gold": 60,
+          "item": "armor",
+          "gear": "plate"
+        },
+        {
+          "at": [15, 26],
+          "gold": 200,
+          "item": "potion"
+        },
+        {
+          "at": [7, 34],
+          "gold": 250,
+          "item": "key"
+        },
+        {
+          "at": [9, 34],
+          "gold": 100,
+          "item": "armor",
+          "gear": "mithril"
+        }
+      ],
+      "guardians": [
+        {
+          "at": [36, 14],
+          "monster": "skeletonGuard"
+        },
+        {
+          "at": [11, 14],
+          "monster": "zombieHorde"
+        },
+        {
+          "at": [3, 14],
+          "monster": "wraith"
+        },
+        {
+          "at": [12, 24],
+          "monster": "hydra"
+        },
+        {
+          "at": [8, 33],
+          "monster": "sharruk"
+        }
+      ],
+      "messages": [
+        {
+          "at": [24, 2],
+          "text": "Claw marks score the walls - a burrow dug by something huge. Light spills from the pit above."
+        },
+        {
+          "at": [24, 9],
+          "text": "Rubble, and the shattered pieces of an enormous statue of some terrible demon."
+        },
+        {
+          "at": [24, 14],
+          "text": "Iron sconces twisted into demon shapes. Tapestries of sacrifice. A demonic temple."
+        },
+        {
+          "at": [33, 14],
+          "text": "Clack... clack-clack. Bones, chattering in alarm."
+        },
+        {
+          "at": [15, 14],
+          "text": "The stench from the west is almost unbearable."
+        },
+        {
+          "at": [12, 20],
+          "text": "Something vast breathes in the chamber below. Five somethings."
+        },
+        {
+          "at": [5, 14],
+          "text": "A chill runs through you. The shadows here are moving."
+        },
+        {
+          "at": [3, 25],
+          "text": "A dry fountain, choked with dust. Great doors lead south."
+        },
+        {
+          "at": [8, 30],
+          "text": "Stained glass, backlit by magic, rings the sanctuary. On the altar lies an ancient tome."
+        },
+        {
+          "at": [7, 33],
+          "text": "Sharruk's hoard lies heaped by the altar - and among it, a heavy key etched with portcullis runes."
+        }
+      ]
+    }
+  ]
+}

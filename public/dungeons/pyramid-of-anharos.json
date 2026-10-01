@@ -1,0 +1,1232 @@
+{
+  "format": "underrealm-dungeon",
+  "version": 1,
+  "id": "pyramid-of-anharos",
+  "name": "The Pyramid of Anharos",
+  "author": "Modeled after the Eamon adventure by Pat Hurst",
+  "description": "Cross the Desert of Terza, take the stolen Diamond of Purity back from the Riff raiders, and restore it to the tomb of Anharos.",
+  "intro": [
+    "At nine in the morning the sky over the Main Hall goes black: a storm-cloud shaped like a taloned",
+    "hand. Pindar Rambis, the high priest, cries out: the tomb of Anharos has been robbed, and his",
+    "Diamond of Purity stolen. Take it back from the thieves - and set it in the seal of his tomb."
+  ],
+  "victory": [
+    "You set the Diamond of Purity into the Seal of Anharos. Light pours from every glyph in the tomb.",
+    "Far to the west, the taloned cloud over the Main Hall tears apart, and the sun returns."
+  ],
+  "goal": {
+    "requires": "crystal",
+    "item": "the Diamond of Purity",
+    "sprite": "diamond",
+    "taken": "Under the sheik's carpet you find an onyx case. Inside blazes the Diamond of Purity! Now take it to the tomb of Anharos.",
+    "barred": "The Seal of Anharos lies dark. A diamond-shaped hollow waits at its heart, empty."
+  },
+  "start": {
+    "gold": 100,
+    "food": 5,
+    "water": 8,
+    "torches": 4,
+    "potions": 2,
+    "weapon": "shortsword",
+    "armor": "leather"
+  },
+  "music": {
+    "depths": {
+      "chiptune": {
+        "bpm": 96,
+        "leadWave": "pulse25",
+        "volume": 0.65,
+        "lead": "E4 - F4 G#4 A4 - G#4 F4 E4 - - - B3 - C4 - B3 - A3 - B3 - C4 D4 E4 - F4 - E4 - - -",
+        "harmony": "E3 . B3 . E3 . B3 . F3 . C4 . F3 . C4 . E3 . B3 . E3 . B3 . D3 . A3 . E3 . B3 .",
+        "bass": "E2 - - - - - - - F2 - - - - - - - E2 - - - - - - - D2 - - - E2 - - -",
+        "drums": "k . . h s . h . k . . h s . h . k . . h s . h . k . k . s . h ."
+      }
+    }
+  },
+  "textures": {
+    "duneWall": {
+      "preset": "sand",
+      "color": "#c09860"
+    },
+    "sandFloor": {
+      "preset": "sand",
+      "color": "#d8b87c"
+    },
+    "sandFloorCeil": {
+      "preset": "sky",
+      "color": "#78a8e0"
+    },
+    "oasisGrass": {
+      "preset": "grass",
+      "color": "#5c8c3c"
+    },
+    "oasisGrassCeil": {
+      "preset": "sky",
+      "color": "#78a8e0"
+    },
+    "pyramidWall": {
+      "preset": "sandstone",
+      "color": "#c8a46c",
+      "mortar": "#7c6440"
+    },
+    "glyphWall": {
+      "preset": "glyphs",
+      "color": "#c0a068",
+      "mortar": "#7c6440",
+      "accent": "#2c6ca8"
+    },
+    "tentWall": {
+      "preset": "tent",
+      "color": "#2c2424",
+      "accent": "#a82c20"
+    },
+    "tentRug": {
+      "preset": "carpet",
+      "color": "#7c1c24",
+      "accent": "#c8a040"
+    },
+    "tentRugCeil": {
+      "preset": "tent",
+      "color": "#3c3030",
+      "accent": "#7c2c20"
+    },
+    "dust": {
+      "preset": "plain",
+      "color": "#8c7c60"
+    },
+    "moat": {
+      "preset": "water",
+      "color": "#5c6c3c",
+      "accent": "#c8d8a0"
+    },
+    "flames": {
+      "preset": "flame"
+    },
+    "darkCloud": {
+      "preset": "storm",
+      "color": "#24202c",
+      "accent": "#c8e0ff"
+    },
+    "redWall": {
+      "preset": "glyphs",
+      "color": "#a84830",
+      "mortar": "#4c1c10",
+      "accent": "#f8c030"
+    },
+    "redFloor": {
+      "preset": "plain",
+      "color": "#7c2c1c"
+    },
+    "orangeWall": {
+      "preset": "glyphs",
+      "color": "#c87830",
+      "mortar": "#5c3410",
+      "accent": "#4c2c08"
+    },
+    "orangeFloor": {
+      "preset": "plain",
+      "color": "#9c5c28"
+    },
+    "yellowWall": {
+      "preset": "glyphs",
+      "color": "#d8c040",
+      "mortar": "#6c5c10",
+      "accent": "#f8f8a0"
+    },
+    "yellowFloor": {
+      "preset": "plain",
+      "color": "#a89030"
+    },
+    "greenWall": {
+      "preset": "moss",
+      "color": "#4c7c40",
+      "mortar": "#1c3014"
+    },
+    "greenFloor": {
+      "preset": "grass",
+      "color": "#3c6c30"
+    },
+    "blueWall": {
+      "preset": "glyphs",
+      "color": "#4c78b8",
+      "mortar": "#1c2c50",
+      "accent": "#f8f8ff"
+    },
+    "blueFloor": {
+      "preset": "plain",
+      "color": "#34507c"
+    },
+    "violetWall": {
+      "preset": "glyphs",
+      "color": "#7c4ca0",
+      "mortar": "#2c1840",
+      "accent": "#f0c8ff"
+    },
+    "violetFloor": {
+      "preset": "plain",
+      "color": "#4c2c68"
+    },
+    "whiteWall": {
+      "preset": "sandstone",
+      "color": "#e8e4dc",
+      "mortar": "#9c9890"
+    },
+    "whiteFloor": {
+      "preset": "plain",
+      "color": "#d8d4cc"
+    },
+    "blackWall": {
+      "preset": "plain",
+      "color": "#141418"
+    },
+    "blackFloor": {
+      "preset": "plain",
+      "color": "#0c0c10"
+    },
+    "muralWall": {
+      "preset": "glyphs",
+      "color": "#c8a46c",
+      "mortar": "#7c6440",
+      "accent": "#e8b828"
+    },
+    "sealGate": {
+      "preset": "gate",
+      "color": "#c8a46c"
+    }
+  },
+  "sprites": {
+    "hermit": {
+      "model": "peddler",
+      "tint": "#e0c8a0"
+    },
+    "herder": {
+      "model": "sheik",
+      "tint": "#b89c7c"
+    },
+    "sheikSeat": {
+      "model": "throne",
+      "tint": "#f0d8a8"
+    },
+    "krellStatue": {
+      "model": "demon",
+      "tint": "#9c9080"
+    },
+    "krell": {
+      "model": "demon",
+      "tint": "#a898b8"
+    },
+    "beam": {
+      "model": "crystal",
+      "tint": "#fff8e0"
+    },
+    "fireSpirit": {
+      "model": "demon",
+      "tint": "#ffd0a0"
+    },
+    "shade": {
+      "model": "wraith",
+      "tint": "#e0a8ff"
+    },
+    "darkGhost": {
+      "model": "ghost",
+      "tint": "#484858"
+    },
+    "milkyFountain": {
+      "model": "fountain",
+      "tint": "#f8f8ff"
+    }
+  },
+  "tiles": {
+    "d": {
+      "type": "wall",
+      "texture": "duneWall"
+    },
+    ",": {
+      "type": "floor",
+      "floor": "sandFloor"
+    },
+    "\"": {
+      "type": "floor",
+      "floor": "oasisGrass"
+    },
+    "p": {
+      "type": "wall",
+      "texture": "pyramidWall"
+    },
+    "h": {
+      "type": "wall",
+      "texture": "glyphWall"
+    },
+    "n": {
+      "type": "wall",
+      "texture": "tentWall"
+    },
+    "r": {
+      "type": "floor",
+      "floor": "tentRug"
+    },
+    "j": {
+      "type": "prop",
+      "sprite": "palm",
+      "walkable": false
+    },
+    "o": {
+      "type": "prop",
+      "sprite": "obelisk",
+      "walkable": false
+    },
+    "Q": {
+      "type": "throne",
+      "sprite": "sheikSeat"
+    },
+    "q": {
+      "type": "prop",
+      "sprite": "krellStatue",
+      "walkable": false
+    },
+    "b": {
+      "type": "prop",
+      "sprite": "beam",
+      "walkable": false
+    },
+    "s": {
+      "type": "prop",
+      "sprite": "sarcophagus",
+      "walkable": false
+    },
+    "u": {
+      "type": "fountain",
+      "sprite": "milkyFountain"
+    },
+    "z": {
+      "type": "secret",
+      "texture": "muralWall"
+    },
+    "E": {
+      "type": "exit",
+      "texture": "sealGate"
+    },
+    "M": {
+      "type": "door",
+      "texture": "moat",
+      "message": "You swim the moat. The oily liquid stings your skin, and broken glass lines its walls."
+    },
+    "W": {
+      "type": "door",
+      "texture": "flames",
+      "message": "You hurl yourself through the wall of flame - and out the other side, singed but alive!"
+    },
+    "Y": {
+      "type": "door",
+      "texture": "darkCloud",
+      "message": "Lightning crackles over your armour as you force your way through the black cloud!"
+    },
+    "R": {
+      "type": "wall",
+      "texture": "redWall"
+    },
+    "1": {
+      "type": "floor",
+      "floor": "redFloor"
+    },
+    "O": {
+      "type": "wall",
+      "texture": "orangeWall"
+    },
+    "2": {
+      "type": "floor",
+      "floor": "orangeFloor"
+    },
+    "U": {
+      "type": "wall",
+      "texture": "yellowWall"
+    },
+    "3": {
+      "type": "floor",
+      "floor": "yellowFloor"
+    },
+    "V": {
+      "type": "wall",
+      "texture": "greenWall"
+    },
+    "4": {
+      "type": "floor",
+      "floor": "greenFloor"
+    },
+    "I": {
+      "type": "wall",
+      "texture": "blueWall"
+    },
+    "5": {
+      "type": "floor",
+      "floor": "blueFloor"
+    },
+    "J": {
+      "type": "wall",
+      "texture": "violetWall"
+    },
+    "6": {
+      "type": "floor",
+      "floor": "violetFloor"
+    },
+    "w": {
+      "type": "wall",
+      "texture": "whiteWall"
+    },
+    "7": {
+      "type": "floor",
+      "floor": "whiteFloor"
+    },
+    "k": {
+      "type": "wall",
+      "texture": "blackWall"
+    },
+    "8": {
+      "type": "floor",
+      "floor": "blackFloor"
+    }
+  },
+  "monsters": [
+    {
+      "id": "scorpion",
+      "name": "Giant Scorpion",
+      "sprite": "scorpion",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "hp": [8, 12],
+      "dmg": [2, 5],
+      "hit": 4,
+      "def": 3,
+      "xp": 16,
+      "gold": [0, 0],
+      "gullible": 0.3,
+      "bribe": 0,
+      "special": "poison",
+      "intro": "A four-foot scorpion scuttles across the sand, pincers snapping, tail arched to sting!"
+    },
+    {
+      "id": "dustDevil",
+      "name": "Dust Devil",
+      "sprite": "dustDevil",
+      "levels": [1, 2],
+      "hp": [7, 10],
+      "dmg": [1, 6],
+      "hit": 6,
+      "def": 2,
+      "xp": 12,
+      "gold": [0, 3],
+      "gullible": 0.2,
+      "bribe": 0,
+      "intro": "A whirling figure of sand and dust comes at you, seeking to envelop you in its lethal grip!"
+    },
+    {
+      "id": "hermit",
+      "name": "Crazed Hermit",
+      "sprite": "hermit",
+      "levels": [1, 2],
+      "hp": [5, 8],
+      "dmg": [1, 3],
+      "hit": 0,
+      "def": 0,
+      "xp": 6,
+      "gold": [0, 8],
+      "gullible": 0.8,
+      "bribe": 5,
+      "intro": "A sun-seared man in rags lurches at you, waving his arms and mumbling gibberish."
+    },
+    {
+      "id": "riffRaider",
+      "name": "Riff Raider",
+      "sprite": "riff",
+      "levels": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "hp": [9, 13],
+      "dmg": [2, 6],
+      "hit": 5,
+      "def": 1,
+      "xp": 16,
+      "gold": [5, 20],
+      "gullible": 0.35,
+      "bribe": 25,
+      "special": "steal",
+      "intro": "A Riff raider in a black burnoose draws his scimitar: \"Die, dog of an infidel!\""
+    },
+    {
+      "id": "caravan",
+      "name": "Spice Caravan",
+      "sprite": "peddler",
+      "levels": [],
+      "hp": [12, 12],
+      "dmg": [1, 2],
+      "hit": 0,
+      "def": 1,
+      "xp": 0,
+      "gold": [0, 0],
+      "gullible": 0,
+      "bribe": 0,
+      "special": "friendly",
+      "intro": "A spice caravan rests in the lee of a dune. Its master waves you over to trade."
+    },
+    {
+      "id": "fouad",
+      "name": "Fouad the Riff Warrior",
+      "sprite": "riff",
+      "levels": [],
+      "hp": [14, 18],
+      "dmg": [2, 7],
+      "hit": 6,
+      "def": 1,
+      "xp": 30,
+      "gold": [10, 25],
+      "gullible": 0.3,
+      "bribe": 30,
+      "intro": "Fouad cocks his old flintlock and levels it at you: \"Die! Dog of an infidel!\""
+    },
+    {
+      "id": "sheba",
+      "name": "Sheba the Matriarch",
+      "sprite": "riff",
+      "levels": [],
+      "hp": [10, 14],
+      "dmg": [1, 5],
+      "hit": 4,
+      "def": 1,
+      "xp": 20,
+      "gold": [5, 30],
+      "gullible": 0.3,
+      "bribe": 20,
+      "intro": "An old woman in a black chadour drops her pot and flies at you, screaming like a banshee!"
+    },
+    {
+      "id": "masoud",
+      "name": "Masoud the Raider",
+      "sprite": "riff",
+      "levels": [],
+      "hp": [18, 22],
+      "dmg": [3, 7],
+      "hit": 7,
+      "def": 2,
+      "xp": 45,
+      "gold": [20, 40],
+      "gullible": 0.2,
+      "bribe": 50,
+      "intro": "Masoud, the sheik's second, draws a black scimitar notched for tearing flesh."
+    },
+    {
+      "id": "sheik",
+      "name": "Saala el Kahir",
+      "sprite": "sheik",
+      "levels": [],
+      "hp": [34, 34],
+      "dmg": [3, 7],
+      "hit": 6,
+      "def": 2,
+      "xp": 250,
+      "gold": [200, 200],
+      "gullible": 0.1,
+      "bribe": 0,
+      "special": "boss",
+      "bolt": [3, 7],
+      "boltText": "raises the stolen Diamond - its light sears you",
+      "intro": "Saala el Kahir, sheik of the Riffs, rises trembling from his cushions. The Diamond's curse is eating him alive - but he will not give it up!"
+    },
+    {
+      "id": "mummy",
+      "name": "Mummy",
+      "sprite": "mummy",
+      "levels": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "hp": [14, 20],
+      "dmg": [3, 7],
+      "hit": 4,
+      "def": 3,
+      "xp": 30,
+      "gold": [0, 20],
+      "gullible": 0.5,
+      "bribe": 0,
+      "intro": "A mummy in yellowed wrappings shambles out of a niche, arms outstretched."
+    },
+    {
+      "id": "tombGuard",
+      "name": "Mummified Guard",
+      "sprite": "mummy",
+      "levels": [],
+      "hp": [24, 28],
+      "dmg": [3, 8],
+      "hit": 6,
+      "def": 3,
+      "xp": 60,
+      "gold": [10, 30],
+      "gullible": 0.3,
+      "bribe": 0,
+      "intro": "The shrivelled body of a tomb guard stirs to life and moves to attack the defiler - you!"
+    },
+    {
+      "id": "avatar",
+      "name": "Avatar of Alaxar",
+      "sprite": "hawkman",
+      "levels": [],
+      "hp": [48, 52],
+      "dmg": [5, 11],
+      "hit": 12,
+      "def": 5,
+      "xp": 180,
+      "gold": [0, 0],
+      "gullible": 0.1,
+      "bribe": 0,
+      "intro": "The hawk-headed statue of Alaxar comes to life! It claws with its talons and stabs with its beak!"
+    },
+    {
+      "id": "fireSpirit",
+      "name": "Flame of the Red Room",
+      "sprite": "fireSpirit",
+      "levels": [],
+      "hp": [26, 30],
+      "dmg": [4, 10],
+      "hit": 10,
+      "def": 4,
+      "xp": 80,
+      "gold": [0, 0],
+      "gullible": 0.3,
+      "bribe": 0,
+      "intro": "The painted volcanoes flare, and a figure of living flame steps out of the mural!"
+    },
+    {
+      "id": "twilightShade",
+      "name": "Twilight Shade",
+      "sprite": "shade",
+      "levels": [],
+      "hp": [22, 26],
+      "dmg": [4, 9],
+      "hit": 10,
+      "def": 5,
+      "xp": 70,
+      "gold": [0, 0],
+      "gullible": 0.3,
+      "bribe": 0,
+      "special": "drain",
+      "intro": "The violet dusk thickens into a shade with burning eyes!"
+    },
+    {
+      "id": "shadow",
+      "name": "Thing in the Dark",
+      "sprite": "darkGhost",
+      "levels": [],
+      "hp": [24, 28],
+      "dmg": [4, 10],
+      "hit": 12,
+      "def": 6,
+      "xp": 90,
+      "gold": [0, 0],
+      "gullible": 0.2,
+      "bribe": 0,
+      "special": "drain",
+      "intro": "Something in the utter darkness reaches for you with cold hands!"
+    },
+    {
+      "id": "krell",
+      "name": "Krell, the Bound Demon",
+      "sprite": "krell",
+      "levels": [],
+      "hp": [60, 66],
+      "dmg": [6, 13],
+      "hit": 14,
+      "def": 6,
+      "xp": 350,
+      "gold": [150, 150],
+      "gullible": 0.05,
+      "bribe": 0,
+      "special": "regen",
+      "intro": "Krell, arch-demon of Anharos, strains at the bonds of Alaxar: \"No thief shall touch the Seal!\""
+    }
+  ],
+  "levels": [
+    {
+      "name": "The Desert of Terza",
+      "depth": 1,
+      "style": {
+        "palette": "desert"
+      },
+      "daylight": true,
+      "encounters": {
+        "rate": 0.045,
+        "monsters": [
+          "scorpion",
+          "dustDevil",
+          "hermit",
+          "riffRaider"
+        ]
+      },
+      "map": [
+        "dddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "ddddddddddddddddddddddddddddddddddd,,,,,dddddddddddddddd",
+        "ddddddddddddddddddddddddddddddddddj,,,,,jddddddddddddddd",
+        "ddddddddddddddddddddddddddddddddddd,,,,,dddddddddddddddd",
+        "ddddddddddddddddddddddddddddddddddddd,dddddddddddddddddd",
+        "ddddddddddddddddddddddddddd,,,,,,,,,,,,,,,,,,,,,dddddddd",
+        "ddddddddddddd,,,,,ddddddddd,,,,,,,,,,,,,,,,,,,,,dddddddd",
+        "dddddddddddd,,,,,,,dddddddd,,,,,,,,,,,,,,,,,,,,,dd,,,ddd",
+        "ddddddddddd,c,,,,,,,ddddddd,,,ppphppphppphppp,,,d,,,,,dd",
+        "ddddddddddd,,,,,,,,,ddddddd,,,ppppppppppppppp,,,,,,,,,,d",
+        "ddddddddddd,,,,,,,,,ddddddd,,,ppppppppppppppp,,,,,,o,,,d",
+        "dddddddddddd,,,,,,,dddddddd,,,ppppppppppppppp,,,,,,,,,,d",
+        "ddddddddddddd,,,,,ddddddddd,,,ppppppppppppppp,,,d,,,,,dd",
+        "ddddddddddddddd,ddddddddddd,,,ppppppppppppppp,,,dd,,,ddd",
+        "ddddddddddddddd,ddddddddddd,,,hpppppppppppppp,,,ddd,dddd",
+        "dddPddSdddddddd,,,,,,dddddd,,,>pppppppppppppp,,,,,,,dddd",
+        "ddxxxxxxjddddd,,,,,,,,,dddd,,,hpppppppppppppp,,,ddd,dddd",
+        "ddxxxxxxxddddd,,,,,,,,,dddd,,,ppppppppppppppp,,,ddd,dddd",
+        "dTxxxxxxxdddd,,,,,,,,,,,ddd,,,ppppppppppppppp,,,ddd,dddd",
+        "ddxxxxx@x,,,,,,,,,,,,,,,,,,,,,ppppppppppppppp,,,ddd,dddd",
+        "dHxxxxxxxdddd,,,,,,,,,,,ddd,,,ppppppppppppppp,,,ddd,dddd",
+        "ddxxxxxxxddddd,,,,,,,,,dddd,,,ppphppphppphppp,,,ddd,dddd",
+        "ddjxxxxxxddddd,,,,,,,,,dddd,,,,,,,,,,,,,,,,,,,,,ddd,dddd",
+        "ddddGddddddddddd,,,,,dddddd,,,,,,,,,,,,,,,,,,,,,ddd,dddd",
+        "ddddddddddddddddd,ddddddddd,,,,,,,,,,,,,,,,,,,,,ddd,dddd",
+        "ddddddddddddddddd,ddddddddddddddddddddddddddddddddd,dddd",
+        "ddddddddddddddddd,dddddddddddddddddddddnnnnnj\"\"\"\"\"\"\"nnnn",
+        "ddddddddddddddd,,,,,dddddddddddddddddddncrrn\"\"\"\"\"\"j\"nrcn",
+        "dddddddddddddd,,,,,,,ddddddddddddddddddnrrrr\"\"\"\"\"\"\"\"rrrn",
+        "ddddddddddddd,,,,,,,,,dddddddddddddddddnrrrn\"\"\"\"\"\"\"\"nrrn",
+        "ddddddddddddd,,,,,,,,,dddddddddddddddddnnnnn\"\"\"f\"\"\"\"nnnn",
+        "ddddddddddddd,c,,,,,,,dddddddddddddddddnnnnn\"\"\"\"\"\"\"\"dddd",
+        "dddddddddddddd,,,,,,,ddddddddddddddddddncrrn\"j\"\"\"\"\"\"dddd",
+        "ddddddddddddddd,,,,,dddddddddddddddddddnrrrr\"\"\"\"\"\"\"\"dddd",
+        "dddddddddddddddddddddddddddddddddddddddncrrndnnnrnnndddd",
+        "dddddddddddddddddddddddddddddddddddddddnnnnndnrrrrrndddd",
+        "dddddddddddddddddddddddddddddddddddddddddddddnrrrrrndddd",
+        "dddddddddddddddddddddddddddddddddddddddddddddnrrQrcndddd",
+        "dddddddddddddddddddddddddddddddddddddddddddddnnnnnnndddd",
+        "dddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      ],
+      "chests": [
+        {
+          "at": [12, 8],
+          "gold": 12,
+          "item": "potion"
+        },
+        {
+          "at": [14, 31],
+          "gold": 20,
+          "item": "food"
+        },
+        {
+          "at": [50, 37],
+          "gold": 150
+        },
+        {
+          "at": [40, 27],
+          "gold": 20,
+          "item": "weapon",
+          "gear": "mace"
+        },
+        {
+          "at": [40, 32],
+          "gold": 5,
+          "item": "food"
+        },
+        {
+          "at": [40, 34],
+          "gold": 5,
+          "item": "torches"
+        },
+        {
+          "at": [54, 27],
+          "gold": 35,
+          "item": "potion"
+        }
+      ],
+      "guardians": [
+        {
+          "at": [37, 2],
+          "monster": "caravan"
+        },
+        {
+          "at": [41, 28],
+          "monster": "fouad"
+        },
+        {
+          "at": [53, 28],
+          "monster": "sheba"
+        },
+        {
+          "at": [48, 35],
+          "monster": "masoud"
+        },
+        {
+          "at": [48, 37],
+          "monster": "sheik"
+        }
+      ],
+      "messages": [
+        {
+          "at": [7, 19],
+          "text": "A black cloud shaped like a taloned hand hangs over the Main Hall. East lies the Desert of Endless Sorrows."
+        },
+        {
+          "at": [5, 19],
+          "text": "Omar the guide spits in the sand: \"The pyramid is east. The Riff dogs who robbed it camp at an oasis beyond the obelisk.\""
+        },
+        {
+          "at": [11, 19],
+          "text": "The burning sands stretch out of sight. Nothing disturbs the contoured dunes. Drink while you can."
+        },
+        {
+          "at": [15, 9],
+          "text": "Only the susurrus of the shifting sand. The sun beats down mercilessly."
+        },
+        {
+          "at": [17, 30],
+          "text": "The bleached bones of some unfortunate traveller lie half-buried here."
+        },
+        {
+          "at": [26, 19],
+          "text": "A strangely pointed dune to the east... no - a pyramid of gigantic stone blocks!"
+        },
+        {
+          "at": [29, 15],
+          "text": "A ponderous stone door is set in the base of the pyramid, adorned with strange glyphs. It stands ajar."
+        },
+        {
+          "at": [46, 23],
+          "text": "Look out! You wrench your foot free of a sinkhole in the sand."
+        },
+        {
+          "at": [37, 6],
+          "text": "The north face is less worn - the winds come from the south. The heat wrings the moisture from you."
+        },
+        {
+          "at": [51, 13],
+          "text": "An obelisk of sandstone, its faces etched with glyphs. The name \"Terza\" is carved prominently. Old blood spots its base."
+        },
+        {
+          "at": [51, 20],
+          "text": "A dying merchant, Farouk, lies in the sand. \"Riffs... they took my water... they went south...\" He says no more."
+        },
+        {
+          "at": [51, 25],
+          "text": "Green vegetation springs from the dead land. Black Riff tents surround an oasis."
+        },
+        {
+          "at": [48, 34],
+          "text": "Rich furnishings and a Persian carpet: the sheik's tent. A giant, emaciated man sits among the cushions, trembling."
+        }
+      ]
+    },
+    {
+      "name": "The Pyramid of Anharos",
+      "depth": 3,
+      "style": {
+        "palette": "desert"
+      },
+      "encounters": {
+        "rate": 0.05,
+        "monsters": [
+          "mummy",
+          "scorpion",
+          "spider",
+          "bat",
+          "riffRaider"
+        ]
+      },
+      "map": [
+        "pppppppppppppppppppppppppppppppppppp",
+        "pppppppppppppppppppppppppppppppppppp",
+        "ppppppppppphhhhhhh>hhhhhhhpppppppppp",
+        "ppppppppppph.............hpppppppppp",
+        "ppppppppppph.............hpppppppppp",
+        "ppppppppppph......q......hpppppppppp",
+        "ppppppppppph.............hpppppppppp",
+        "ppppppppppph.............hpppppppppp",
+        "ppppppppppph.............hpppppppppp",
+        "ppppppppppph.............hpppppppppp",
+        "ppppppppppph.............hpppppppppp",
+        "ppppppppppph.............hpppppppppp",
+        "ppppppppphhhhhhhhh,hhhhhhhpppppppppp",
+        "ppppppppphc,,,,h,,,,,p,,,,cppppppppp",
+        "ppppppppph,,,,,,,,,,,D,,,,,ppppppppp",
+        "ppppppppph,,,,,h,,,,,p,,,,,ppppppppp",
+        "ppppppppph,,,,,h,,,,,p,,,,,ppppppppp",
+        "ppppppppphhhhhhhpp,ppppppppppppppppp",
+        "pppppppppppppppppp,ppppppppppppppppp",
+        "pppppppppppppppppp,ppppppppppppppppp",
+        "pppppppppppppppppp,ppppppppppppppppp",
+        "pppppppppppppppppp,ppppppppppppppppp",
+        "pppppppppppppppppp,ppppppppppppppppp",
+        "pppppppppppppppppp,ppppppppppppppppp",
+        "pppppppppp,,,,p,,,,,,,p,,,cppppppppp",
+        "pppppppppp,,,,,,,,,,,,,,,,,ppppppppp",
+        "pppppppppp,,,,p,,,,,,,p,,,,ppppppppp",
+        "ppppppppppc,,,p,,,,,,,p,,,,ppppppppp",
+        "pppppppppppppppphh,hhppppppppppppppp",
+        "pppppppppppppppphc,,hppppppppppppppp",
+        "ppppp,,,,ppppppph,,,hppppppppppppppp",
+        "pppppc,,,Z,,,,,,,,,,hppppppppppppppp",
+        "ppppp,,,,ppppppph,,,hppppppppppppppp",
+        "pppppppppppppppphh<hhppppppppppppppp"
+      ],
+      "chests": [
+        {
+          "at": [17, 29],
+          "gold": 0,
+          "item": "torches"
+        },
+        {
+          "at": [5, 31],
+          "gold": 70,
+          "item": "potion"
+        },
+        {
+          "at": [10, 27],
+          "gold": 30,
+          "item": "armor",
+          "gear": "chain"
+        },
+        {
+          "at": [26, 24],
+          "gold": 15,
+          "item": "food"
+        },
+        {
+          "at": [26, 13],
+          "gold": 20,
+          "item": "food"
+        },
+        {
+          "at": [10, 13],
+          "gold": 45,
+          "item": "potion"
+        }
+      ],
+      "guardians": [
+        {
+          "at": [12, 25],
+          "monster": "tombGuard"
+        }
+      ],
+      "messages": [
+        {
+          "at": [18, 32],
+          "text": "Walls covered with glyphs praising the name of Anharos. Two unlit torches sit in their brackets."
+        },
+        {
+          "at": [13, 31],
+          "text": "Forms that might be men, curiously flattened, lie in dark stains. The ceiling blocks here are... loose."
+        },
+        {
+          "at": [10, 31],
+          "text": "A draught whispers from a crack in the wall to the west."
+        },
+        {
+          "at": [18, 25],
+          "text": "Dust covers the floor. A ramp leads steeply down to the north."
+        },
+        {
+          "at": [14, 25],
+          "text": "Two desiccated guards lie in the dust - slain to guard Anharos in the afterlife. One of them twitches."
+        },
+        {
+          "at": [23, 25],
+          "text": "The dried husks of four slaves, roped together and slain to serve their king."
+        },
+        {
+          "at": [18, 20],
+          "text": "\"Quiet as a tomb.\" A strong spiritual presence fills this place."
+        },
+        {
+          "at": [15, 14],
+          "text": "Scraps of rich fabric strewn about by searchers. Four silk-clad handmaids lie at rest."
+        },
+        {
+          "at": [21, 14],
+          "text": "Strings of coloured glass beads clatter as you pass."
+        },
+        {
+          "at": [18, 10],
+          "text": "A giant statue of the dreaded Krell, jackal-headed, rises fifty feet to the vaulted ceiling."
+        },
+        {
+          "at": [18, 3],
+          "text": "Handholds climb into the gaping stone jaws of Krell. A corridor leads on behind them."
+        }
+      ]
+    },
+    {
+      "name": "The Trials of Alaxar",
+      "depth": 5,
+      "style": {
+        "palette": "desert"
+      },
+      "encounters": {
+        "rate": 0.04,
+        "monsters": [
+          "mummy",
+          "wraith",
+          "ghost",
+          "spider"
+        ]
+      },
+      "map": [
+        "hhhhhhhhhhhhhhhhhhhh<hhhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhh,,,hhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhh,,,hhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhh,,,hhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhhhMhhhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhh,,,hhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhh,,,hhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhhhWhhhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhh,,,hhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhh,,,hhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhhhYhhhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhh,,,hhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhh,,,hhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhh,,,hhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhhh,hhhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhh.........hhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhh.........hhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhh.........hhhhhhhhhhhhhhh",
+        "hhhhhhhRRRRRRRhh.........hhJJJJJJJhhhhhh",
+        "hhhhhhhRc1111Rhh.........hhJ6666cJhhhhhh",
+        "hhhhhhhR11111Rhhhhhh.hhhhhhJ66666Jhhhhhh",
+        "hhhhhhhR11111Rhhhhhh.hhhhhhJ66666Jhhhhhh",
+        "hhhhhhhR11111...............66666Jhhhhhh",
+        "hhhhhhhRRRRRRRhh.........hhJJJJJJJhhhhhh",
+        "hhhhhhhhhOOOOOOO.........IIIIIIIkkkkkhhh",
+        "hhhhhhhhhOc2222O.........I5555cI8888khhh",
+        "hhhhhhhhhO22222.....b.....55555D888ckhhh",
+        "hhhhhhhhhO22222O.........I55555I8888khhh",
+        "hhhhhhhVVOOOOOOO.........IIIIIIIkkkkkhhh",
+        "hhhhhhhV44444Vhh.........hhU33333Uhhhhhh",
+        "hhhhhhhVf4444...............33333Uhhhhhh",
+        "hhhhhhhV44444Vhhhwww.wwwhhhU33333Uhhhhhh",
+        "hhhhhhhV44444Vhhhw77777whhhU3333cUhhhhhh",
+        "hhhhhhhVVVVVVVhhhw77777whhhUUUUUUUhhhhhh",
+        "hhhhhhhhhhhhhhhhhw77777whhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhw77777whhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhwww>wwwhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+      ],
+      "chests": [
+        {
+          "at": [8, 19],
+          "gold": 90
+        },
+        {
+          "at": [10, 25],
+          "gold": 20,
+          "item": "food"
+        },
+        {
+          "at": [32, 32],
+          "gold": 160
+        },
+        {
+          "at": [30, 25],
+          "gold": 30,
+          "item": "torches"
+        },
+        {
+          "at": [32, 19],
+          "gold": 50,
+          "item": "potion"
+        },
+        {
+          "at": [35, 26],
+          "gold": 250,
+          "item": "weapon",
+          "gear": "runeblade"
+        }
+      ],
+      "guardians": [
+        {
+          "at": [20, 17],
+          "monster": "avatar"
+        },
+        {
+          "at": [10, 20],
+          "monster": "fireSpirit"
+        },
+        {
+          "at": [30, 20],
+          "monster": "twilightShade"
+        },
+        {
+          "at": [34, 26],
+          "monster": "shadow"
+        }
+      ],
+      "messages": [
+        {
+          "at": [20, 2],
+          "text": "A fresh body lies here, its flesh partly dissolved. South, the corridor is cut by a wide moat."
+        },
+        {
+          "at": [20, 5],
+          "text": "A blackened corpse, burned only recently. Ahead, a wall of flame roars without scorching the stone."
+        },
+        {
+          "at": [20, 8],
+          "text": "A corpse lies rigid, hair singed, teeth clenched. Ahead, a black cloud spits tiny bolts of lightning."
+        },
+        {
+          "at": [20, 12],
+          "text": "A body in a dried pool of blood. A bloody trail leads south through an arch, glyphs carved before it."
+        },
+        {
+          "at": [20, 15],
+          "text": "A statue stands at the centre of the chamber: a man's body, a hawk's head, and hands shaped into cruel talons."
+        },
+        {
+          "at": [20, 23],
+          "text": "A ray of light rises from a white marble pedestal. Eight arches, each crowned by an ankh of a different colour."
+        },
+        {
+          "at": [20, 25],
+          "text": "The pedestal has a diamond-shaped depression in its top. The beam splashes against the ceiling, far above."
+        },
+        {
+          "at": [11, 21],
+          "text": "Murals of fires and volcanoes. A red glow, uncomfortably warm."
+        },
+        {
+          "at": [12, 26],
+          "text": "Murals of orange produce heaped in copper bowls."
+        },
+        {
+          "at": [30, 31],
+          "text": "Hundreds of yellow suns beam down from the murals."
+        },
+        {
+          "at": [10, 31],
+          "text": "Leafy forest murals, and the coolness of a forest glade. Water trickles from a basin."
+        },
+        {
+          "at": [28, 26],
+          "text": "The blue skies of a summer day. To the east, an arch opens onto utter darkness."
+        },
+        {
+          "at": [29, 21],
+          "text": "Dusk advancing into twilight. Something in the violet light is watching you."
+        },
+        {
+          "at": [32, 26],
+          "text": "Total, impenetrable darkness. Something breathes in it."
+        },
+        {
+          "at": [20, 33],
+          "text": "A room finished all in white. A pool of milky brilliance, cold as the moon, glows at its heart."
+        }
+      ]
+    },
+    {
+      "name": "The Tomb of Anharos",
+      "depth": 6,
+      "style": {
+        "palette": "desert"
+      },
+      "encounters": {
+        "rate": 0.035,
+        "monsters": [
+          "mummy",
+          "wraith",
+          "ghost"
+        ]
+      },
+      "map": [
+        "hhhhhhhhhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhhhhhhhhhhhhhh",
+        "hhhhhhhhhhhhEhhhhhhhhhhhh",
+        "hhhhhhhhh,,,,,,,hhhhhhhhh",
+        "hhhhhhhhh,,,,,,,hhhhhhhhh",
+        "hhhhhhhhh,,,,,,,hhhhhhhhh",
+        "hhhhhhhhh,,,,,,,hhhhhhhhh",
+        "hhhhhhhhhhhhzhhhhhhhhhhhh",
+        "hhhhhh.............hhhhhh",
+        "hhhhhh.............hhhhhh",
+        "hhhhhh.............hhhhhh",
+        "hhhhhh.K.........s.hhhhhh",
+        "hhhhhh.............hhhhhh",
+        "hhhhhh.............hhhhhh",
+        "hhhhhh.............hhhhhh",
+        "hhhhhh.............hhhhhh",
+        "hhhhhhhhhhhh.hhhhhhhhhhhh",
+        "hhhhhhhh.........hhhhhhhh",
+        "hhhhhhhh.........hhhhhhhh",
+        "hhhhhhhh.K.....s.hhhhhhhh",
+        "hhhhhhhh.........hhhhhhhh",
+        "hhhhhhhh.........hhhhhhhh",
+        "hhhhhhhh.........hhhhhhhh",
+        "hhhhhhhhhhhh.hhhhhhhhhhhh",
+        "hhhhhhhh.........hhhhhhhh",
+        "hhhhhc,h....u....h,chhhhh",
+        "hhhhh,,...........,,hhhhh",
+        "hhhhh,,h.........h,,hhhhh",
+        "hhhhhhhh.........hhhhhhhh",
+        "hhhhhhhhhhhh<hhhhhhhhhhhh"
+      ],
+      "chests": [
+        {
+          "at": [5, 25],
+          "gold": 120,
+          "item": "potion"
+        },
+        {
+          "at": [19, 25],
+          "gold": 100,
+          "item": "potion"
+        }
+      ],
+      "guardians": [
+        {
+          "at": [6, 26],
+          "monster": "tombGuard"
+        },
+        {
+          "at": [18, 26],
+          "monster": "tombGuard"
+        },
+        {
+          "at": [12, 5],
+          "monster": "krell"
+        }
+      ],
+      "messages": [
+        {
+          "at": [12, 28],
+          "text": "A white marble stair has carried you up from the moonpool. Milky liquid bubbles from the floor here."
+        },
+        {
+          "at": [12, 24],
+          "text": "Murals of the battles and triumphs of Anharos cover the walls."
+        },
+        {
+          "at": [12, 20],
+          "text": "A sarcophagus and a throne, both small for a man. Murals of Anharos with a beautiful woman."
+        },
+        {
+          "at": [12, 14],
+          "text": "The sarcophagus of a great king, crested with the Seal of Anharos. Alaxar beams light upon him from the murals."
+        },
+        {
+          "at": [12, 8],
+          "text": "A life-size mural: four slaves carrying a golden ark. There is a door painted in the ark's side... or is it painted?"
+        },
+        {
+          "at": [12, 4],
+          "text": "Beyond Krell, the Seal of Anharos glows in the wall - a diamond-shaped hollow at its heart."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "format": "underrealm-dungeon",
+  "version": 1,
+  "id": "crypt-of-tharn",
+  "name": "The Crypt of Tharn",
+  "author": "Doug Hunt",
+  "description": "A small hand-built crypt: three levels, a hollow king, and a gate that only a crystal can open.",
+  "intro": [
+    "You slip through the cracked doors of the Crypt of Tharn.",
+    "Somewhere below, the Hollow King clutches the Crystal of Echoes -",
+    "and only the crystal will open the hidden gate out of his tomb."
+  ],
+  "victory": ["The gate grinds open. Cold night air - you are free of the crypt."],
+  "goal": { "requires": "crystal" },
+  "start": { "gold": 140, "food": 4, "water": 4, "torches": 3, "potions": 2, "weapon": "shortsword", "armor": "leather" },
+
+  "music": {
+    "depths": {
+      "chiptune": {
+        "bpm": 70,
+        "leadWave": "pulse50",
+        "volume": 0.6,
+        "lead": "D4 - - - F4 - E4 - D4 - - - A3 - - - A#3 - - - A3 - G3 - A3 - - - - - - - D4 - - - F4 - G4 - A4 - - - G4 - F4 - E4 - F4 - E4 - D4 - C#4 - - - D4 - - -",
+        "harmony": "D3 . A3 . D3 . A3 . D3 . A3 . D3 . A3 . A#2 . F3 . A#2 . F3 . A2 . E3 . A2 . E3 . D3 . A3 . D3 . A3 . D3 . A3 . D3 . A3 . A#2 . F3 . A#2 . F3 . A2 . E3 . A2 . E3 .",
+        "bass": "D2 - - - - - - - D2 - - - - - - - A#1 - - - - - - - A1 - - - - - - - D2 - - - - - - - D2 - - - - - - - A#1 - - - - - - - A1 - - - - - - -",
+        "drums": "k . . . . . . . k . . . s . . . k . . . . . . . k . . . s . . . k . . . . . . . k . . . s . . . k . . . . . . . k . . . s . . ."
+      }
+    },
+    "abyss": { "song": "realmAbyss" },
+    "battle": {
+      "chiptune": {
+        "bpm": 144,
+        "leadWave": "pulse25",
+        "lead": "D5 D5 . D5 F5 . E5 D5 C#5 . A4 . C#5 . E5 . D5 D5 . D5 F5 . G5 A5 A#5 . A5 . G5 . E5 .",
+        "bass": "D2 D3 D2 D3 D2 D3 D2 D3 A1 A2 A1 A2 A1 A2 A1 A2 D2 D3 D2 D3 D2 D3 D2 D3 A#1 A#2 A#1 A#2 A1 A2 A1 A2",
+        "drums": "k . h k s . h . k . h k s . h . k . h k s . h . k . h k s . h ."
+      }
+    }
+  },
+
+  "textures": {
+    "boneWall": { "preset": "bone", "color": "#9c9484", "mortar": "#2c2820" },
+    "tombWall": { "preset": "stone", "color": "#4c5c6c" },
+    "tombFloor": { "preset": "plain", "color": "#3c3c44" }
+  },
+  "sprites": {
+    "statue": { "model": "knight", "tint": "#9c9ca8" },
+    "warden": { "model": "skeleton", "tint": "#b8c8ff" },
+    "hollowKing": { "model": "lich", "tint": "#a8ffb8" }
+  },
+  "tiles": {
+    "b": { "type": "wall", "texture": "boneWall" },
+    "w": { "type": "wall", "texture": "tombWall" },
+    "s": { "type": "prop", "sprite": "statue", "walkable": false },
+    ",": { "type": "floor", "floor": "tombFloor" }
+  },
+  "monsters": [
+    {
+      "id": "warden",
+      "name": "Bone Warden",
+      "sprite": "warden",
+      "levels": [],
+      "hp": [26, 32],
+      "dmg": [3, 8],
+      "hit": 10,
+      "def": 3,
+      "xp": 60,
+      "gold": [20, 40],
+      "gullible": 0.2,
+      "bribe": 0,
+      "intro": "A Bone Warden rattles to life, blocking the way!"
+    },
+    {
+      "id": "hollowKing",
+      "name": "Tharn, the Hollow King",
+      "sprite": "hollowKing",
+      "levels": [],
+      "hp": [70, 70],
+      "dmg": [5, 12],
+      "hit": 14,
+      "def": 5,
+      "xp": 300,
+      "gold": [200, 200],
+      "gullible": 0.05,
+      "bribe": 0,
+      "special": "boss",
+      "intro": "Tharn, the Hollow King, rises from his throne!"
+    }
+  ],
+
+  "levels": [
+    {
+      "name": "The Crypt Gate",
+      "depth": 1,
+      "style": { "palette": "crypt" },
+      "encounters": { "rate": 0.05, "monsters": ["rat", "bat", "skeleton"] },
+      "map": [
+        "bbbbbbbbbbbbbbbbbb",
+        "b@...b.....b...c.b",
+        "b.bb.b.bbb.b.bbb.b",
+        "b.bc.b...b...bs..b",
+        "b.bbbb.b.bbbbb.b.b",
+        "b......b.......b.b",
+        "bbbb.bbbbb.bbb.b.b",
+        "b....b...b.b...b.b",
+        "b.bb.b.b.b.b.bbb.b",
+        "b.bc...b...b.....b",
+        "b.bbbbbbZbbbbbbb.b",
+        "b.b......s.....b.b",
+        "b...c.......c..b>b",
+        "bbbbbbbbbbbbbbbbbb"
+      ],
+      "chests": [
+        { "at": [3, 3], "gold": 25, "item": "potion" },
+        { "at": [15, 1], "gold": 40 },
+        { "at": [3, 9], "gold": 10, "item": "torches" },
+        { "at": [4, 12], "gold": 60, "item": "weapon", "gear": "mace" },
+        { "at": [12, 12], "gold": 30, "item": "food" }
+      ],
+      "messages": [
+        { "at": [1, 1], "text": "Dust and silence. Bones are set into the walls like bricks." },
+        { "at": [8, 9], "text": "A draught blows from the wall to the south..." }
+      ]
+    },
+    {
+      "name": "The Ossuary",
+      "depth": 3,
+      "style": { "palette": "crypt" },
+      "encounters": { "rate": 0.06, "monsters": ["skeleton", "zombie", "ghost", "spider"] },
+      "map": [
+        "bbbbbbbbbbbbbbbbbbbb",
+        "b<....b.......b....b",
+        "b.bbb.b.bbbbb.b.bb.b",
+        "b.b.....b...b...b..b",
+        "b.b.bbb.b.b.bbbbb.bb",
+        "b...b.c.b.b.......cb",
+        "bbb.bbbbb.bbbbbbb.bb",
+        "b.....f...........>b",
+        "b.bbbbbbbLbbbbbbbbbb",
+        "b.b...............cb",
+        "b.b.bbbbbbbbbbbbb.bb",
+        "b...b...........b..b",
+        "bbb.b.bbbbbbbbb.bb.b",
+        "b...b.c.......b....b",
+        "bbbbbbbbbbbbbbbbbbbb"
+      ],
+      "chests": [
+        { "at": [6, 5], "gold": 20, "item": "key" },
+        { "at": [18, 5], "gold": 50, "item": "potion" },
+        { "at": [18, 9], "gold": 120, "item": "armor", "gear": "chain" },
+        { "at": [6, 13], "gold": 35, "item": "torches" }
+      ],
+      "guardians": [{ "at": [12, 7], "monster": "warden" }],
+      "messages": [{ "at": [9, 7], "text": "An iron door to the south. Behind it, something glints." }]
+    },
+    {
+      "name": "Tharn's Tomb",
+      "depth": 5,
+      "style": { "wall": "#4c5c6c", "floor": "#3c3c44", "ceiling": "#16161c" },
+      "encounters": { "rate": 0.05, "monsters": ["ghost", "wraith", "knight"] },
+      "map": [
+        "wwwwwwwwwwwwwwwwwwww",
+        "w<,,,,,w,,,,,,,,,,,w",
+        "w,wwww,w,wwwwwwwww,w",
+        "w,w,,,,,,w,,,,,,,w,w",
+        "w,w,wwwwww,wwwww,w,w",
+        "w,,,w,,,,,,w,,,w,,,w",
+        "wwwww,s,,,s,w,c,wwXw",
+        "w,,,,,,,K,,,w,,,,,,w",
+        "w,wwww,s,,,s,wwwww,w",
+        "w,,c,w,,,,,,,,,,,,,w",
+        "wwwwwwwwwwwwwwwwwwww"
+      ],
+      "chests": [
+        { "at": [14, 6], "gold": 80, "item": "potion" },
+        { "at": [3, 9], "gold": 60, "item": "food" }
+      ],
+      "guardians": [{ "at": [8, 7], "monster": "hollowKing" }],
+      "messages": [{ "at": [18, 5], "text": "The Crystal would sing here, if you had it..." }]
+    }
+  ]
+}

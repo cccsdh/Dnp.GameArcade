@@ -36,10 +36,6 @@ All you need is [Node.js](https://nodejs.org/) (the LTS version). Then either do
 
 The script checks that Node is installed and runs `npm install` on the first run, and again whenever `package-lock.json` changes. It then starts the server and opens the arcade in your default browser. Press **Ctrl+C** in the window to stop it. The `.cmd` wrapper runs the PowerShell script with the execution policy bypassed, so it works on machines that block unsigned scripts, and it keeps the window open if something fails so you can read the error.
 
-### Deploying to the Hyper-V VM
-
-`scripts\deploy-hyperv.ps1` (run from an elevated PowerShell) builds the game and publishes `dist/` to an Ubuntu VM named `game-arcade`, where nginx serves it on port 5180 (`http://game-arcade.mshome.net:5180/`). The first run creates the VM from the cached Ubuntu cloud image; later runs just push the new build. Use `-SkipBuild` to deploy the current `dist/` as-is.
-
 ### Installing on a Raspberry Pi
 
 The `raspberry-pi/` folder turns a Pi into a game server for your home network: `install.sh` installs nginx, serves the arcade on port 5180, opens that port in the firewall, and can optionally open the arcade full-screen on the Pi's own screen. From the PC, `.\raspberry-pi\make-bundle.ps1 -PiHost pi@raspberrypi.local -Install` builds the game, copies it over and installs it in one go. The full step-by-step guide, from flashing the SD card to troubleshooting, is [`raspberry-pi/INSTALL.md`](raspberry-pi/INSTALL.md).
@@ -153,11 +149,6 @@ A Super-Mario-Kart-style racer with a behind-the-kart, Mode-7 view.
 - **Items**, from the rainbow item boxes: **Turbo**, **Banana** (dropped behind you), **Bouncing Orb** (fires straight ahead and bounces off walls), **Homing Orb** (chases the racer ahead of you) and **Super Star** (invincible and faster; hits spin others out). Which item you get depends on your position: leaders get defensive ones, stragglers get the strong ones.
 - **Effects:** drift sparks, boost flames, speed lines and a camera pull-back while boosting, dust off-road, hit stars and a spin-out, screen shake, item-box shards, rainbow star trails, countdown lights, lap and final-lap banners, a wrong-way warning, finish confetti, and a results table.
 
-**How it's drawn.** The track floor is a WebGL fragment shader (`src/game/kart/mode7.ts`). For every pixel below the horizon it projects back onto the flat track and samples a 2048x2048 track texture, snapped to chunky pixels and fogged into the distance. The texture is painted procedurally from each track's control points (`src/game/kart/tracks.ts`), which also produces the surface map used by the physics, the AI's centreline and racing line, the scenery and a 360° sky panorama. Karts, items and props are placed as sprites with the same projection.
-
-**Sprites.** I searched for freely licensed kart sprites with drivers, drawn from the many angles a behind-the-kart view needs, and found none. [Kenney's Racing Pack](https://kenney.nl/assets/racing-pack) (CC0) is top-down only, and [OpenGameArt's racing kart](https://opengameart.org/content/racing-kart) (CC0) is a single 3D model with no driver. Instead, every kart, driver, item and prop is a small original voxel model (`src/game/kart/models.ts`). At load time a tiny software renderer (`src/game/shared/voxel.ts`) draws it into pixel-art sprites, 16 viewing angles per kart, so each kart shows the right side as it turns.
-
-**Audio.** The four songs are original chiptunes played by `src/game/shared/Chiptune.ts`: a menu theme and one per track, with the final lap playing faster. The engine is a live synth voice whose pitch follows your speed, and tyre screech and off-road rumble are filtered-noise voices. The effects (countdown, boosts, mini-turbos, item roulette, throws, spin-outs, lap and finish jingles) are synthesized too. Kart bumps and barrier hits reuse two of the CC0 Kenney impact clips.
 
 ## The Underrealm
 
